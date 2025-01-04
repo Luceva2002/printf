@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnm.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 15:21:03 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/04 18:21:24 by luevange         ###   ########.fr       */
+/*   Created: 2025/01/04 18:18:48 by luevange          #+#    #+#             */
+/*   Updated: 2025/01/04 18:21:09 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
+	char	*s;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	s = ft_itoa(n);
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
+	free(s);
 }
