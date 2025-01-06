@@ -6,11 +6,11 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 00:21:30 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/04 01:27:26 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/06 18:03:16 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "printf.h"
 
 int ft_printf(const char *format)
 {

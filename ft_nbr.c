@@ -6,11 +6,11 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 18:18:48 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/06 17:38:24 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/06 18:03:44 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "printf.h"
 
 void	ft_putnbr(int n, int fd)
 {
