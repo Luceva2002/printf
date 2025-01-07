@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbr.c                                           :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: ahabdelr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/04 18:18:48 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/07 12:39:29 by luevange         ###   ########.fr       */
+/*   Created: 2024/12/10 11:56:16 by ahabdelr          #+#    #+#             */
+/*   Updated: 2024/12/15 22:30:31 by ahabdelr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include <stddef.h>
 
-void	ft_putnbr(int n, int fd)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*s;
+	size_t	i;
+	char	*dest_i;
+	char	*src_i;
 
-	s = ft_itoa(n);
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
-	free(s);
-}
-
-int main()
-{
-	prinntf()
+	dest_i = (char *)dest;
+	src_i = (char *)src;
+	i = 0;
+	while (i < n)
+	{
+		dest_i[i] = src_i[i];
+		i++;
+	}
+	return (dest);
 }

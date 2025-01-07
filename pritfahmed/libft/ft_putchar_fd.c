@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbr.c                                           :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: ahabdelr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/04 18:18:48 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/07 12:39:29 by luevange         ###   ########.fr       */
+/*   Created: 2024/12/12 11:24:10 by ahabdelr          #+#    #+#             */
+/*   Updated: 2024/12/20 00:30:17 by ahabdelr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include <unistd.h>
 
-void	ft_putnbr(int n, int fd)
+void	ft_putchar_fd(int c, int fd)
 {
-	char	*s;
-
-	s = ft_itoa(n);
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
-	free(s);
-}
-
-int main()
-{
-	prinntf()
+	write(fd, &c, 1);
 }

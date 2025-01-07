@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbr.c                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: ahabdelr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/04 18:18:48 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/07 12:39:29 by luevange         ###   ########.fr       */
+/*   Created: 2024/12/10 10:02:07 by ahabdelr          #+#    #+#             */
+/*   Updated: 2024/12/11 11:36:07 by ahabdelr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include <stddef.h>
 
-void	ft_putnbr(int n, int fd)
+void	*ft_memset(void *ptr, int value, size_t num)
 {
-	char	*s;
+	size_t	i;
+	char	*ptr_int;
 
-	s = ft_itoa(n);
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
-	free(s);
-}
-
-int main()
-{
-	prinntf()
+	i = 0;
+	ptr_int = (char *)ptr;
+	while (i < num)
+	{
+		ptr_int[i] = (char)value;
+		i++;
+	}
+	return (ptr);
 }

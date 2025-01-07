@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbr.c                                           :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: ahabdelr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/04 18:18:48 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/07 12:39:29 by luevange         ###   ########.fr       */
+/*   Created: 2024/12/10 17:44:37 by ahabdelr          #+#    #+#             */
+/*   Updated: 2024/12/15 22:22:06 by ahabdelr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include <stddef.h>
 
-void	ft_putnbr(int n, int fd)
+char	*ft_strchr(char *s, int c)
 {
-	char	*s;
+	int	i;
 
-	s = ft_itoa(n);
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
-	free(s);
-}
-
-int main()
-{
-	prinntf()
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == (char)c)
+			return (s + i);
+		i++;
+	}
+	if ((char)c == '\0')
+		return (s + i);
+	return (NULL);
 }
