@@ -6,13 +6,13 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 18:18:48 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/07 12:39:29 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/09 16:17:19 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_putnbr(int n, int fd)
+void	ft_putnbr(int n, int cnt)
 {
 	char	*s;
 
@@ -23,7 +23,4 @@ void	ft_putnbr(int n, int fd)
 	free(s);
 }
 
-int main()
-{
-	prinntf()
-}
+
