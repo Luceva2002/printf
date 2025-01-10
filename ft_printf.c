@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 00:21:30 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/09 17:19:05 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/09 18:08:35 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 void printf_format(va_list arg, const char *format, int cnt)
 {
-    if (format == 'c')
+    if (*format == 'c')
         return(ft_putchar(va_arg(arg, int ), cnt))
-    else if (format == 's')
-        return();
+    else if (*format == 's')
+            return();
     else if (format == 'p')
         return();
-    else if (format == 'd')
+    else if (*format == 'd')
         return();
-    else if (format == 'i')
+    else if (*format == 'i')
         return();
     else if (format == 'u')
         return();
-    else if (format == 'x')
+    else if (*format == 'x')
         return();
-    else if (format == 'X')
+    else if (*format == 'X')
         return();
-    else if (format == '%')
-        return();
+    else if (*format == '%')
+        return(ft_putchar('%'));
 }
 
 int ft_printf(const char *format, ...)
