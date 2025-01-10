@@ -6,32 +6,33 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 00:21:30 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/10 11:50:54 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/10 14:34:42 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void printf_format(va_list arg, const char *format, int cnt)
+static int printf_format(va_list arg, const char *format, int cnt)
 {
     if (*format == 'c')
         return(ft_putchar(va_arg(arg, int ), cnt));
-    /*else if (*format == 's')
-            return(); 
+    else if (*format == 's')
+            return(ft_putstr(va_arg(arg, char*))); 
     else if (format == 'p')
         return();
     else if (*format == 'd')
-        return();
+        return(ft_putnbr(va_arg(arg, int)));
     else if (*format == 'i')
-        return();
-    else if (format == 'u')
+        return(ft_putnbr(va_arg(arg, int)));
+    else if (*format == 'u')
         return();
     else if (*format == 'x')
         return();
     else if (*format == 'X')
-        return(); */
+        return();
     else if (*format == '%')
-        return(ft_putchar('%', cnt));
+        return(ft_putchar('%'));
+    return (0);
 }
 
 int ft_printf(const char *format, ...)
@@ -59,8 +60,4 @@ int ft_printf(const char *format, ...)
         format ++;
         return (cnt);
     }
-}
-int main(int ac, char **av)
-{
-    ft_printf((char *)av[1]);
 }
