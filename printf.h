@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 00:26:28 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/06 18:01:19 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/10 11:40:55 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <stdarg.h>
-# include <libft/libft.h>
+# include "libft/libft.h"
 
 void	ft_putchar(char c, int fd);
 void	ft_putnbr(int n, int fd);

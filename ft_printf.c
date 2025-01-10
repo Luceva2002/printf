@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 00:21:30 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/09 18:08:35 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/10 11:50:54 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void printf_format(va_list arg, const char *format, int cnt)
 {
     if (*format == 'c')
-        return(ft_putchar(va_arg(arg, int ), cnt))
-    else if (*format == 's')
-            return();
+        return(ft_putchar(va_arg(arg, int ), cnt));
+    /*else if (*format == 's')
+            return(); 
     else if (format == 'p')
         return();
     else if (*format == 'd')
@@ -29,9 +29,9 @@ void printf_format(va_list arg, const char *format, int cnt)
     else if (*format == 'x')
         return();
     else if (*format == 'X')
-        return();
+        return(); */
     else if (*format == '%')
-        return(ft_putchar('%'));
+        return(ft_putchar('%', cnt));
 }
 
 int ft_printf(const char *format, ...)
@@ -40,9 +40,9 @@ int ft_printf(const char *format, ...)
     va_list args;
 
     cnt = 0;
-    va_start(args, format)
+    va_start(args, format);
     if (!format)
-        return(NULL);
+        return(0);
     while(*format != '\0')
     {
         if(*format == '%')
@@ -59,4 +59,8 @@ int ft_printf(const char *format, ...)
         format ++;
         return (cnt);
     }
+}
+int main(int ac, char **av)
+{
+    ft_printf((char *)av[1]);
 }

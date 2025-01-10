@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 00:20:55 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/09 16:17:00 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/10 11:49:23 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putstr(char *s, int cnt)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		write(fd, &s[i], 1);
+		write(1, &s[i], 1);
 		i ++;
 	}
 	cnt ++;
