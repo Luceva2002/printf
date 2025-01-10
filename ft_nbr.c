@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 18:18:48 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/10 12:17:02 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/10 16:54:26 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	ft_putnbr(int cnt)
 	free(s);
 }
 
-
-
-
+int ft_putunsnmb(unsigned int n)
+{
+	ft_putnbr((unsigned int)n);
+}
