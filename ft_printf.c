@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 00:21:30 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/10 14:34:42 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/10 14:37:14 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int ft_printf(const char *format, ...)
             cnt ++;
         }
         format ++;
-        return (cnt);
     }
+    va_end(args);
+    return (cnt);
 }
