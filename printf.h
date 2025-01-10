@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 00:26:28 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/10 16:46:24 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/10 16:55:42 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 # include "libft/libft.h"
 
 int ft_printf(const char *format, ...);
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_putnbr(int n);
-int ft_puthexnm(unsigned int n, const char *s);
-int ft_putpntr(unsigned long pnt, const char *s);
-int ft_putunsnmb(unsigned int n);
+int	ft_put_char(char c);
+int	ft_put_str(char *s);
+int ft_put_pntr(unsigned long pnt, const char *s);
+int	ft_put_nbr(int n);
+int ft_put_hex_nmb(unsigned int n, const char *s);
+int ft_put_uns_nmb(unsigned int n);
 
 #endif
