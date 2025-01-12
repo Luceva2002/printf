@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 00:21:30 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/12 17:26:13 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/12 17:28:21 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ static int printf_format(va_list arg, const char *format, int cnt)
         return(ft_putchar(va_arg(arg, int ), cnt));
     else if (*format == 's')
             return(ft_putstr(va_arg(arg, char*))); 
-    else if (format == 'p')
-        return(ft_put_pntr(va_arg(arg, unsigned long), cnt));
+    else if (*format == 'p')
+        return(ft_put_pntr(va_arg(arg, unsigned long), format));
     else if (*format == 'd')
         return(ft_putnbr(va_arg(arg, int)));
     else if (*format == 'i')
