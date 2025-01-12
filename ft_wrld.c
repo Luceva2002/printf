@@ -12,23 +12,23 @@
 
 #include "printf.h"
 
-int ft_put_char(char c)
+int	ft_put_char(char c)
 {
-    write(1, &c, 1);
-		return (c);
+	write(1, &c, 1);
+	return (c);
 }
 
 int	ft_put_str(char *s)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	if (!s)
-		return(write(1, "(null)", 6));	
+		return (write(1, "(null)", 6));
 	while (s[i] != '\0')
 	{
 		write(1, &s[i], 1);
-		i ++;
+		i++;
 	}
 	return (i);
 }
