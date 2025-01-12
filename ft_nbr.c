@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 18:18:48 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/12 19:25:10 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/12 23:18:16 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_put_nbr(int n)
 	return (len);
 }
 
-int	ft_put_uns_nmb(unsigned int n)
+int	ft_put_uns_nmb(unsigned long long n)
 {
 	char	*s;
 	int		len;
@@ -54,7 +54,7 @@ int	ft_put_hex_nmb(unsigned int n, const char *s)
 	int i;
 
 	i = 0;
-	if (i == 0)
+	if (n == 0)
 		return (write(1, "0", 1));
 	while (n > 0)
 	{

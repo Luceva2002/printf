@@ -6,7 +6,7 @@
 #    By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/12 19:16:42 by luevange          #+#    #+#              #
-#    Updated: 2025/01/12 22:45:25 by luevange         ###   ########.fr        #
+#    Updated: 2025/01/12 23:20:11 by luevange         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,11 +41,11 @@ $(LIBFT):
 
 clean:
 	rm -f $(OBJS)
-	make -C $(LIBFT_DIR) clean  # Pulizia libft
+	make -C $(LIBFT_DIR) clean
 
 fclean: clean
 	rm -f $(NAME)
-	rm -f $(LIBFT)  # Rimuove libft.a
+	rm -f $(LIBFT)
 
 re: fclean all
 
