@@ -36,9 +36,9 @@ int	cnt_ln(long long int nb)
 
 char	*ft_itoall(long long int nb)
 {
-	char	*s;
-	long long int		i;
-	long long int		cnt;
+	char			*s;
+	long long int	i;
+	long long int	cnt;
 
 	i = 0;
 	cnt = cnt_ln(nb);
@@ -66,7 +66,7 @@ size_t	ft_strlen(const char *s1)
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t	i;	
+	size_t	i;
 
 	i = 0;
 	if (size == 0)
@@ -79,4 +79,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (ft_strlen(src));
 }
-

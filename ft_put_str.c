@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 02:22:54 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/13 02:27:07 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/13 17:37:00 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_put_str(char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!s)
