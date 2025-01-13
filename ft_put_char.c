@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 02:26:32 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/13 02:32:58 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/13 03:23:23 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 int	ft_put_char(char c)
 {
 	write(1, &c, 1);
-	return (c);
+	return (1);
 }
