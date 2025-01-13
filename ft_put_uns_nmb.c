@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 02:23:15 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/13 17:36:47 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/13 17:49:18 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 int	ft_put_uns_nmb(long long int n)
 {
-	char			*s;
-	long long int	len;
+	char	c;
+	int		count = 0;
 
-	s = ft_itoall(n);
-	if (!s)
-		return (0);
-	len = write(1, s, ft_strlen(s));
-	free(s);
-	return (len);
+	if (n >= 10)
+		count += ft_put_uns_nmb(n / 10);
+	c = n % 10 + '0';
+	count += write(1, &c, 1);
+	return (count);
 }
