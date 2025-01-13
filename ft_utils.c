@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:05:27 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/13 02:31:57 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/13 02:36:38 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,7 @@ size_t	ft_strlen(const char *s1)
 
 	i = 0;
 	while (s1[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
 
@@ -81,3 +79,4 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (ft_strlen(src));
 }
+
