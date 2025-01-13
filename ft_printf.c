@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 00:21:30 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/12 22:50:16 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/13 02:15:20 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	printf_format(va_list arg, const char *format)
 	else if (*format == 'i')
 		return (ft_put_nbr(va_arg(arg, int)));
 	else if (*format == 'u')
-		return (ft_put_uns_nmb(va_arg(arg, unsigned int)));
+		return (ft_put_uns_nmb(va_arg(arg, long long int)));
 	else if (*format == 'x')
 		return (ft_put_hex_nmb(va_arg(arg, unsigned int), format));
 	else if (*format == 'X')

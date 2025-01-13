@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:05:27 by luevange          #+#    #+#             */
-/*   Updated: 2024/12/27 18:18:16 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/13 02:31:57 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <limits.h>
+#include "printf.h"
 
-int	cnt_ln(int nb)
+int	cnt_ln(long long int nb)
 {
-	int	div;
-	int	cnt;
+	long long int	div;
+	long long int	cnt;
 
 	cnt = 0;
 	if (nb == 0)
@@ -35,32 +34,17 @@ int	cnt_ln(int nb)
 	return (cnt);
 }
 
-char	*min_int(char *s)
-{
-	free(s);
-	s = malloc(sizeof(char) * 12);
-	ft_strlcpy(s, "-2147483648", 12);
-	return (s);
-}
-
-char	*ft_itoa(int nb)
+char	*ft_itoall(long long int nb)
 {
 	char	*s;
-	int		i;
-	int		cnt;
+	long long int		i;
+	long long int		cnt;
 
 	i = 0;
 	cnt = cnt_ln(nb);
 	s = (char *)malloc(sizeof(char) * (cnt + 1));
 	if (!s)
 		return (NULL);
-	if (nb < 0)
-	{
-		if (nb == -2147483648)
-			return (min_int(s));
-		s[i++] = '-';
-		nb = -nb;
-	}
 	s[cnt] = '\0';
 	while (--cnt >= i)
 	{
@@ -68,4 +52,32 @@ char	*ft_itoa(int nb)
 		nb = nb / 10;
 	}
 	return (s);
+}
+
+size_t	ft_strlen(const char *s1)
+{
+	size_t	i;
+
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	i;	
+
+	i = 0;
+	if (size == 0)
+		return (ft_strlen(src));
+	while (src[i] && i < size - 1)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (ft_strlen(src));
 }

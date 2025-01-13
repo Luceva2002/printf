@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_put_hex_nmb.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 15:21:03 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/04 18:21:24 by luevange         ###   ########.fr       */
+/*   Created: 2025/01/13 02:24:53 by luevange          #+#    #+#             */
+/*   Updated: 2025/01/13 02:25:48 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_put_hex_nmb(unsigned int n, const char *s)
 {
-	int	i;
+	char hex[16];
+	int len;
+	int i;
 
 	i = 0;
-	while (s[i] != '\0')
+	if (n == 0)
+		return (write(1, "0", 1));
+	while (n > 0)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		hex[i++] = s[n % 16];
+		n = n / 16;
 	}
+	len = i;
+	while (--i >= 0)
+		write(1, &hex[i], 1);
+	return (len);
 }

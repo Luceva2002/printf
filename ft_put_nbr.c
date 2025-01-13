@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_put_nbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 14:24:01 by luevange          #+#    #+#             */
-/*   Updated: 2024/12/27 18:17:52 by luevange         ###   ########.fr       */
+/*   Created: 2025/01/13 02:21:49 by luevange          #+#    #+#             */
+/*   Updated: 2025/01/13 02:29:01 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
-int	ft_isalnum(int i)
+int	ft_put_nbr(int n)
 {
-	if ((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z') || (i >= '0'
-			&& i <= '9'))
-		return (1);
-	else
+	char	*s;
+	int		len;
+
+	s = ft_itoa(n);
+	if (!s)
 		return (0);
+	len = write(1, s, ft_strlen(s));
+	free(s);
+	return (len);
 }

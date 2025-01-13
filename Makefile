@@ -6,7 +6,7 @@
 #    By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/12 19:16:42 by luevange          #+#    #+#              #
-#    Updated: 2025/01/12 23:20:11 by luevange         ###   ########.fr        #
+#    Updated: 2025/01/13 02:34:17 by luevange         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,13 @@ LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
 SRCS = ft_printf.c \
-       ft_nbr.c \
-       ft_wrld.c
+       ft_put_char.c \
+       ft_put_hex_nmb.c \
+	   ft_put_nbr.c \
+	   ft_put_pntr.c \
+	   ft_put_str.c \
+	   ft_put_uns_nmb.c \
+	   ft_utils.c \
 
 OBJS = $(SRCS:.c=.o)
 

@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_put_pntr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 17:02:19 by luevange          #+#    #+#             */
-/*   Updated: 2024/12/27 18:18:57 by luevange         ###   ########.fr       */
+/*   Created: 2025/01/13 02:24:03 by luevange          #+#    #+#             */
+/*   Updated: 2025/01/13 02:29:40 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_put_pntr(unsigned long pnt, const char *s)
 {
-	char	*s;
+	int	len;
 
-	s = ft_itoa(n);
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
-	free(s);
+	len = write(1, "0x", 2);
+	len += ft_put_hex_nmb(pnt, s);
+	return (len);
 }

@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_put_str.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 15:53:22 by luevange          #+#    #+#             */
-/*   Updated: 2024/12/27 18:20:04 by luevange         ###   ########.fr       */
+/*   Created: 2025/01/13 02:22:54 by luevange          #+#    #+#             */
+/*   Updated: 2025/01/13 02:27:07 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
-int	ft_tolower(int i)
+int	ft_put_str(char *s)
 {
-	if (i >= 65 && i <= 90)
-		return (i + 32);
+	int i;
+
+	i = 0;
+	if (!s)
+		return (write(1, "(null)", 6));
+	while (s[i] != '\0')
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
 	return (i);
 }
