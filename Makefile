@@ -6,11 +6,11 @@
 #    By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/12 19:16:42 by luevange          #+#    #+#              #
-#    Updated: 2025/01/14 13:12:44 by luevange         ###   ########.fr        #
+#    Updated: 2025/01/14 15:21:40 by luevange         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_printf.a
+NAME = libftprintf.a
 
 CC = gcc
 

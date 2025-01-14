@@ -6,11 +6,11 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 02:24:03 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/14 13:34:35 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/14 15:35:36 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_ptr(unsigned long ptr, int cnt)
 {
@@ -36,7 +36,6 @@ int	ft_put_pntr(unsigned long ptr)
 	}
 	if (cnt < 2)
 		write(1, "0x", 2);
-	cnt += 2;
-	ft_ptr(ptr, cnt);
+	cnt += 2;	ft_ptr(ptr, cnt);
 	return (cnt);
 }

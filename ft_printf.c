@@ -6,11 +6,11 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 00:21:30 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/13 17:42:05 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/14 15:23:20 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	printf_format(va_list arg, const char *format)
 {
@@ -60,52 +60,4 @@ int	ft_printf(const char *format, ...)
 	}
 	va_end(args);
 	return (cnt);
-}
- 
-#include "printf.h"
-#include <stdio.h>
-
-int	main(void)
-{
-	int	n;
-
-	int ret1, ret2;
-	// Test singolo carattere
-	ret1 = ft_printf("Custom: Char: %c\n", 'A');
-	ret2 = printf("Origin: Char: %c\n", 'A');
-	printf("Return values: Custom = %d, Origin = %d\n\n", ret1, ret2);
-	// Test stringa
-	ret1 = ft_printf("Custom: String: %s\n", "Hello, world!");
-	ret2 = printf("Origin: String: %s\n", "Hello, world!");
-	printf("Return values: Custom = %d, Origin = %d\n\n", ret1, ret2);
-	// Test puntatore
-	n = 42;
-	ret1 = ft_printf("Custom: Pointer: %p\n", (void *)&n);
-	ret2 = printf("Origin: Pointer: %p\n", (void *)&n);
-	printf("Return values: Custom = %d, Origin = %d\n\n", ret1, ret2);
-	// Test numeri decimali
-	ret1 = ft_printf("Custom: Decimal: %d\n", -12345);
-	ret2 = printf("Origin: Decimal: %d\n", -12345);
-	printf("Return values: Custom = %d, Origin = %d\n\n", ret1, ret2);
-	// Test numeri interi
-	ret1 = ft_printf("Custom: Integer: %i\n", 12345);
-	ret2 = printf("Origin: Integer: %i\n", 12345);
-	printf("Return values: Custom = %d, Origin = %d\n\n", ret1, ret2);
-	// Test numeri unsigned
-	ret1 = ft_printf("Custom: Unsigned: %u\n", 4294967295u);
-	ret2 = printf("Origin: Unsigned: %u\n", 4294967295u);
-	printf("Return values: Custom = %d, Origin = %d\n\n", ret1, ret2);
-	// Test numeri esadecimali minuscoli
-	ret1 = ft_printf("Custom: Hexadecimal (lowercase): %x\n", 255);
-	ret2 = printf("Origin: Hexadecimal (lowercase): %x\n", 255);
-	printf("Return values: Custom = %d, Origin = %d\n\n", ret1, ret2);
-	// Test numeri esadecimali maiuscoli
-	ret1 = ft_printf("Custom: Hexadecimal (uppercase): %X\n", 255);
-	ret2 = printf("Origin: Hexadecimal (uppercase): %X\n", 255);
-	printf("Return values: Custom = %d, Origin = %d\n\n", ret1, ret2);
-	// Test percentuale
-	ret1 = ft_printf("Custom: Percent sign: %%\n");
-	ret2 = printf("Origin: Percent sign: %%\n");
-	printf("Return values: Custom = %d, Origin = %d\n\n", ret1, ret2);
-	return (0);
 }
