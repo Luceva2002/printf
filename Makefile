@@ -6,7 +6,7 @@
 #    By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/12 19:16:42 by luevange          #+#    #+#              #
-#    Updated: 2025/01/13 02:37:26 by luevange         ###   ########.fr        #
+#    Updated: 2025/01/14 13:12:44 by luevange         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,6 @@ SRCS = ft_printf.c \
        ft_put_pntr.c \
        ft_put_str.c \
        ft_put_uns_nmb.c \
-       ft_utils.c \
 
 OBJS = $(SRCS:.c=.o)
 
