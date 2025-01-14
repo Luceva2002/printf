@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 02:56:22 by luevange          #+#    #+#             */
-/*   Updated: 2025/01/13 17:47:35 by luevange         ###   ########.fr       */
+/*   Updated: 2025/01/14 14:46:11 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,22 @@
 int	ft_put_nbr(int n)
 {
 	char	c;
-	int		count = 0;
+	int		cnt;
 
+	cnt = 0;
 	if (n == -2147483648)
 	{
-		count += write(1, "-2147483648", 11);
-		return (count);
+		cnt += write(1, "-2147483648", 11);
+		return (cnt);
 	}
-
 	if (n < 0)
 	{
-		count += write(1, "-", 1);
+		cnt += write(1, "-", 1);
 		n = -n;
 	}
-
 	if (n >= 10)
-		count += ft_put_nbr(n / 10);
-
+		cnt += ft_put_nbr(n / 10);
 	c = n % 10 + '0';
-	count += write(1, &c, 1);
-
-	return (count);
+	cnt += write(1, &c, 1);
+	return (cnt);
 }
